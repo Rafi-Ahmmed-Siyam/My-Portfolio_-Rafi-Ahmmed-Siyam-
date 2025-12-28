@@ -7,31 +7,38 @@ import {
    DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
-
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
+   const pathname = usePathname();
+   console.log(pathname);
    return (
       <nav className="bg-slate-950 border-b border-slate-800  w-full z-50">
          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             {/* Logo */}
-            <div className="text-lg font-semibold text-slate-200">
-               <span className='text-amber-500'>Rafi</span>.dev
-            </div>
+
+            <Link href="#home" className="text-xl font-semibold text-white">
+               Port<span className="text-amber-500">folio.</span>
+            </Link>
 
             {/* Desktop links */}
             <div className="hidden md:flex items-center gap-6 text-slate-300">
-               <a href="#about" className="hover:text-white">
+               <Link href="#home" className="hover:text-white">
+                  Home
+               </Link>
+               <Link href="#about" className="hover:text-white">
                   About
-               </a>
-               <a href="#skills" className="hover:text-white">
+               </Link>
+               <Link href="#skills" className="hover:text-white">
                   Skills
-               </a>
-               <a href="#projects" className="hover:text-white">
+               </Link>
+               <Link href="#projects" className="hover:text-white">
                   Projects
-               </a>
-               <a href="#contact" className="hover:text-white">
+               </Link>
+               <Link href="#contact" className="hover:text-white">
                   Contact
-               </a>
+               </Link>
                {/* <Button variant="ghost" size="icon" className="text-slate-200">
                   <Sun className="size-5" />
                </Button> */}
@@ -61,16 +68,19 @@ export default function Navbar() {
                      className="bg-slate-900 text-white border-slate-800"
                   >
                      <DropdownMenuItem asChild>
-                        <a href="#about">About</a>
+                        <Link href="#home">Home</Link>
                      </DropdownMenuItem>
                      <DropdownMenuItem asChild>
-                        <a href="#skills">Skills</a>
+                        <Link href="#about">About</Link>
                      </DropdownMenuItem>
                      <DropdownMenuItem asChild>
-                        <a href="#projects">Projects</a>
+                        <Link href="#skills">Skills</Link>
                      </DropdownMenuItem>
                      <DropdownMenuItem asChild>
-                        <a href="#contact">Contact</a>
+                        <Link href="#projects">Projects</Link>
+                     </DropdownMenuItem>
+                     <DropdownMenuItem asChild>
+                        <Link href="#contact">Contact</Link>
                      </DropdownMenuItem>
                   </DropdownMenuContent>
                </DropdownMenu>

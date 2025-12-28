@@ -1,107 +1,127 @@
+import React from 'react';
+import { Code2, Server, Wrench } from 'lucide-react';
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
+import ContainerLayout from '../layout/ContainerLayout';
 
-const allSkills = [
+const skillGroups = [
    {
-      name: 'HTML5',
-      desc: 'The backbone of any website, used for structuring web content with modern semantic elements...',
-      icon: 'https://i.ibb.co.com/3m8HYVhz/html-5.png',
+      title: 'Frontend',
+      icon: <Code2 className="w-6 h-6 text-white" />,
+      skills: [
+         { name: 'HTML', url: 'https://i.ibb.co.com/3m8HYVhz/html-5.png' },
+         { name: 'CSS', url: 'https://i.ibb.co.com/PZXj68h5/css-3.png' },
+         { name: 'JavaScript', url: 'https://i.ibb.co.com/Xx2Hgv4Z/js.png' },
+         {
+            name: 'React.js',
+            url: 'https://i.ibb.co.com/b5J9BdF8/react-JS.png',
+         },
+         {
+            name: 'Next.js',
+            url: 'https://i.ibb.co.com/vx4g4nPC/icons8-nextjs-100.png',
+         },
+      ],
    },
    {
-      name: 'CSS3',
-      desc: 'Advanced styling techniques including Flexbox, Grid, and animations to create beautiful layouts...',
-      icon: 'https://i.ibb.co.com/PZXj68h5/css-3.png',
+      title: 'Backend',
+      icon: <Server className="w-6 h-6 text-white" />,
+      skills: [
+         { name: 'Node.js', url: 'https://i.ibb.co.com/qYPZYsLJ/node-js.png' },
+         {
+            name: 'Express.js',
+            url: 'https://i.ibb.co.com/bRQ08t6M/icons8-express-js-100.png',
+         },
+         {
+            name: 'Firebase',
+            url: 'https://i.ibb.co.com/yFmpBymN/icons8-firebase-144.png',
+         },
+         {
+            name: 'MongoDB',
+            url: 'https://i.ibb.co.com/wF0qmfR5/icons8-mongodb-96.png',
+         },
+      ],
    },
    {
-      name: 'JavaScript',
-      desc: 'Deep understanding of ES6+, DOM manipulation, and asynchronous programming for dynamic apps...',
-      icon: 'https://i.ibb.co.com/Xx2Hgv4Z/js.png',
-   },
-   {
-      name: 'React',
-      desc: 'React lets you build user interfaces out of individual pieces called components...',
-      icon: 'https://i.ibb.co.com/b5J9BdF8/react-JS.png',
-   },
-   {
-      name: 'NextJS',
-      desc: "Next.js is a popular React framework that extends React's capabilities with SSR and Static generation...",
-      icon: 'https://i.ibb.co.com/vx4g4nPC/icons8-nextjs-100.png',
-   },
-   {
-      name: 'Node',
-      desc: 'Node.js® is a free, open-source, cross-platform JavaScript runtime environment for backend development...',
-      icon: 'https://i.ibb.co.com/qYPZYsLJ/node-js.png',
-   },
-   {
-      name: 'ExpressJS',
-      desc: 'A minimal and flexible Node.js web application framework that provides robust features for APIs...',
-      icon: 'https://i.ibb.co.com/bRQ08t6M/icons8-express-js-100.png',
-   },
-   {
-      name: 'MongoDB',
-      desc: 'A NoSQL database designed for ease of development and scaling, supporting flexible JSON-like documents...',
-      icon: 'https://i.ibb.co.com/wF0qmfR5/icons8-mongodb-96.png',
-   },
-   {
-      name: 'Firebase',
-      desc: 'Build & run modern, AI-powered experiences users love with Firebase, a Google-backed platform...',
-      icon: 'https://i.ibb.co.com/yFmpBymN/icons8-firebase-144.png',
-   },
-   {
-      name: 'Version Control(Git)',
-      desc: 'Efficiently tracking changes in source code during software development using Git and GitHub...',
-      icon: 'https://i.ibb.co.com/Vc2tMrx3/icons8-git-144.png',
+      title: 'Tools',
+      icon: <Wrench className="w-6 h-6 text-white" />,
+      skills: [
+         {
+            name: 'Git',
+            url: 'https://i.ibb.co.com/Vc2tMrx3/icons8-git-144.png',
+         },
+         {
+            name: 'GitHub',
+            url: 'https://i.ibb.co.com/yFZnTq3C/icons8-github-120.png',
+         },
+         {
+            name: 'Vercel',
+            url: 'https://i.ibb.co.com/xqqn73Cs/icons8-vercel-100.png',
+         },
+      ],
    },
 ];
 
-export default function Skills() {
+export default function MySkills() {
    return (
-      <section className="bg-slate-950 py-24 px-6">
-         <div className="max-w-7xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-24">
-               <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-                  My Technical <span className="text-amber-500">Skills</span>
+      <ContainerLayout>
+         <div id='skills'>
+            {/* Heading section center kora hoyeche */}
+            <div className="mb-12 flex flex-col items-center justify-center text-center">
+               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Technical <span className="text-amber-500">Expertise</span>
                </h2>
-               <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-                  I specialize in the MERN stack and modern frontend
-                  technologies.
+               <div className="h-1 w-20 bg-amber-500 rounded-full mb-6"></div>
+               <p className="text-slate-400 max-w-2xl leading-relaxed text-base md:text-lg">
+                  I have demonstrated expertise in the following tools and
+                  frameworks of modern web technology to build responsive and
+                  scalable web applications.
                </p>
             </div>
 
-            {/* Skills Container using Flexbox for centering last row items */}
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-16">
-               {allSkills.map((skill, index) => (
-                  <Card
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+               {skillGroups.map((group, index) => (
+                  <div
                      key={index}
-                     // এখানে w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)] ব্যবহার করা হয়েছে
-                     // যাতে বড় স্ক্রিনে ৪টি কার্ড থাকে কিন্তু শেষ লাইনে ২/৩টি থাকলে সেগুলো মাঝখানে থাকে।
-                     className="relative bg-slate-900/40 border-slate-800 pt-14 pb-8 px-5 group hover:bg-slate-900 transition-all duration-300 border-b-4 hover:border-b-amber-500 shadow-xl w-87.5 sm:w-[45%] lg:w-[23%]"
+                     className="bg-[#111827] border border-slate-800 rounded-2xl p-5 flex flex-col items-center shadow-lg transition-transform hover:scale-[1.01]"
                   >
-                     {/* Floating Icon Holder */}
-                     <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white rounded-full p-3 shadow-2xl z-10 border-4 border-slate-950 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                        <div className="relative w-full h-full">
-                           <Image
-                              src={skill.icon}
-                              alt={skill.name}
-                              fill
-                              className="object-contain"
-                           />
+                     <div className="flex flex-col items-center mb-6">
+                        <div className="p-2 bg-slate-800 rounded-lg mb-2">
+                           {group.icon}
                         </div>
+                        <h3 className="text-white font-bold tracking-wide uppercase text-xs opacity-80">
+                           {group.title}
+                        </h3>
                      </div>
 
-                     <CardContent className="text-center">
-                        <h3 className="text-xl font-bold text-amber-500 mb-3  tracking-wide">
-                           {skill.name}
-                        </h3>
-                        <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">
-                           {skill.desc}
-                        </p>
-                     </CardContent>
-                  </Card>
+                     {/* justify-center class-ti ekhane add kora hoyeche */}
+                     <div className="grid grid-cols-3 gap-3 w-full justify-center">
+                        {group.skills.map((skill, idx) => (
+                           <div
+                              key={idx}
+                              className="bg-[#1f2937]/40 border border-slate-800/50 p-2 rounded-xl flex flex-col items-center justify-center gap-2 hover:bg-slate-800 transition-all group"
+                           >
+                              <div className="w-10 h-10 flex items-center justify-center relative">
+                                 {skill.url ? (
+                                    <Image
+                                       width={32}
+                                       height={32}
+                                       src={skill.url}
+                                       alt={skill.name}
+                                       className="w-8 h-8 object-contain group-hover:scale-110 transition-transform"
+                                    />
+                                 ) : (
+                                    <div className="w-8 h-8 bg-slate-700 rounded animate-pulse"></div>
+                                 )}
+                              </div>
+                              <span className="text-[10px] md:text-[11px] text-slate-400 font-medium text-center group-hover:text-white transition-colors">
+                                 {skill.name}
+                              </span>
+                           </div>
+                        ))}
+                     </div>
+                  </div>
                ))}
             </div>
          </div>
-      </section>
+      </ContainerLayout>
    );
 }
