@@ -57,7 +57,7 @@ export default function Projects() {
                </h2>
                <div className="h-1 w-20 bg-amber-500 rounded-full mb-6"></div>
                <p className="text-slate-400 max-w-2xl text-sm md:text-base">
-                  A selection of my recent works where I've applied my MERN
+                  A selection of my recent works where I&apos;ve applied my MERN
                   stack skills to solve real-world problems.
                </p>
             </div>
@@ -79,7 +79,7 @@ export default function Projects() {
                      </div>
 
                      {/* Project Content */}
-                     <div className="p-5 flex flex-col flex-grow">
+                     <div className="p-5 flex flex-col grow">
                         <div className="flex justify-between items-start mb-3">
                            <h3 className="text-lg font-bold text-amber-500 group-hover:text-amber-400 transition-colors">
                               {project.title}

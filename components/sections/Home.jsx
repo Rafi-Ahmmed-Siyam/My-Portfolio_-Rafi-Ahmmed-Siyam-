@@ -7,7 +7,10 @@ import { Download, FolderKanban } from 'lucide-react';
 
 export default function Home() {
    return (
-      <section id='home' className="bg-slate-950 py-20 px-6 min-h-[70vh] flex items-center overflow-hidden ">
+      <section
+         id="home"
+         className="bg-slate-950 py-20 px-6 min-h-[80vh] flex items-center overflow-hidden "
+      >
          <div className="w-300 mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-5 ">
             {/* Image Section with Large Circular Background */}
             <div className="relative flex-1 flex justify-center items-center ">
@@ -42,7 +45,7 @@ export default function Home() {
                {/* Social links */}
                <SocialLinks />
                {/* Action Buttons */}
-               <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-7">
+               <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
                   {/* Contact Us - Primary Style
                   <Button className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-6 py-6 rounded-xl font-bold text-lg shadow-lg shadow-amber-500/10 transition-all active:scale-95 gap-2">
                      <Mail className="w-5 h-5" />
@@ -59,16 +62,18 @@ export default function Home() {
                   </Button>
 
                   {/* View Projects - Ghost Style with Animation */}
-                  <Button
-                     variant="ghost"
-                     className="text-amber-500 hover:text-amber-400 hover:bg-transparent px-6 py-6 rounded-xl font-bold text-lg group gap-2"
-                  >
-                     <FolderKanban className="w-5 h-5" />
-                     <span>View Projects</span>
-                     <span className="transition-transform group-hover:translate-x-1">
-                        →
-                     </span>
-                  </Button>
+                  <a href='#projects'>
+                     <Button
+                        variant="ghost"
+                        className="text-amber-500 hover:text-amber-400 hover:bg-transparent px-6 py-6 rounded-xl font-bold text-lg group gap-2"
+                     >
+                        <FolderKanban className="w-5 h-5" />
+                        <span>View Projects</span>
+                        <span className="transition-transform group-hover:translate-x-1">
+                           →
+                        </span>
+                     </Button>
+                  </a>
                </div>
             </div>
          </div>

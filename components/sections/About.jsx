@@ -1,11 +1,12 @@
 import React from 'react';
 import { BookOpen, Code, Heart, Laptop } from 'lucide-react';
 import ContainerLayout from '../layout/ContainerLayout';
+import AboutVisuals from '../common/AboutVisuals';
 
 export default function About() {
    return (
       <ContainerLayout>
-         <div id='about'>
+         <div id="about">
             {/* Section Header */}
             <div className="mb-12 text-center md:text-left">
                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 ">
@@ -27,7 +28,7 @@ export default function About() {
 
                   <p className="text-slate-400 text-lg leading-relaxed">
                      For me, web development is more than just writing code;
-                     it's a true **passion**. I approach every project with
+                     it&apos;s a true **passion**. I approach every project with
                      enthusiasm because I genuinely love building things from
                      scratch and solving complex problems that make a
                      difference.
@@ -71,29 +72,7 @@ export default function About() {
                </div>
 
                {/* Right Side: Visual Display */}
-               <div className="relative">
-                  <div className="absolute -inset-4 bg-amber-500/10 blur-3xl rounded-full"></div>
-                  <div className="relative grid grid-cols-2 gap-4">
-                     <div className="bg-[#111827] border border-slate-800 p-8 rounded-2xl flex flex-col items-center justify-center text-center space-y-2 hover:border-amber-500/50 transition-all">
-                        <Code className="text-amber-500 mb-2" size={32} />
-                        <span className="text-3xl font-bold text-white">
-                           MERN
-                        </span>
-                        <span className="text-slate-500 text-sm uppercase tracking-widest font-semibold">
-                           Specialist
-                        </span>
-                     </div>
-                     <div className="bg-[#111827] border border-slate-800 p-8 rounded-2xl flex flex-col items-center justify-center text-center space-y-2 translate-y-8 hover:border-amber-500/50 transition-all">
-                        <Laptop className="text-amber-500 mb-2" size={32} />
-                        <span className="text-3xl font-bold text-white">
-                           Modern
-                        </span>
-                        <span className="text-slate-500 text-sm uppercase tracking-widest font-semibold">
-                           Solutions
-                        </span>
-                     </div>
-                  </div>
-               </div>
+               <AboutVisuals />
             </div>
          </div>
       </ContainerLayout>
