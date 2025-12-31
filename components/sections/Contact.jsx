@@ -6,8 +6,8 @@ import ContainerLayout from '../layout/ContainerLayout';
 
 export default function Contact() {
    return (
-      <ContainerLayout className="">
-         <div className="max-w-6xl mx-auto " id="contact">
+      <ContainerLayout id="contact">
+         <div className="max-w-6xl mx-auto">
             {/* Section Heading */}
             <div className="mb-16 flex flex-col items-center justify-center text-center">
                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -23,7 +23,8 @@ export default function Contact() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                {/* Left Side: Contact Information */}
                <div className="space-y-8">
-                  <div className="flex flex-col gap-6">
+                  <div className="flex flex-col gap-6 border border-slate-800 text-amber-500 p-5 rounded-2xl">
+                     <h2 className='text-2xl font-bold'>Rafi Ahmmed</h2>
                      {/* Email */}
                      <div className="flex items-center gap-5 group">
                         <div className="w-12 h-12 bg-slate-900 border border-slate-800 rounded-2xl flex items-center justify-center text-amber-500 group-hover:border-amber-500/50 transition-all">
@@ -34,7 +35,7 @@ export default function Contact() {
                               Email Me
                            </p>
                            <p className="text-white font-medium">
-                              yourname@email.com
+                              rafi.ahmmed920@gmail.com
                            </p>
                         </div>
                      </div>
@@ -49,7 +50,7 @@ export default function Contact() {
                               Call Me
                            </p>
                            <p className="text-white font-medium">
-                              +880 1XXX XXXXXX
+                              +880 1815 321383
                            </p>
                         </div>
                      </div>
@@ -64,7 +65,7 @@ export default function Contact() {
                               Location
                            </p>
                            <p className="text-white font-medium">
-                              Dhaka, Bangladesh
+                              Bogura, Bangladesh
                            </p>
                         </div>
                      </div>

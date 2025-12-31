@@ -2,9 +2,9 @@ import { Facebook, Github, Mail } from 'lucide-react';
 import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
 
-const SocialLinks = () => {
+const SocialLinks = ({py=""}) => {
    return (
-      <div className="flex items-center gap-6 justify-center md:justify-start">
+      <div className={`flex items-center gap-3.5 justify-center md:justify-start ${py}`}>
          <a
             href="https://github.com/Rafi-Ahmmed-Siyam"
             target="_blank"

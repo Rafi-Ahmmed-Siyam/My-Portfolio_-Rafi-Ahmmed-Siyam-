@@ -1,19 +1,20 @@
 import React from 'react';
 import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import SocialLinks from '../common/SocialLinks';
 
 export default function Footer() {
    const currentYear = new Date().getFullYear();
 
    return (
-      <footer className="bg-slate-950 border-t border-slate-900 pt-16 pb-8 px-6">
+      <footer className="border-t border-slate-900 pt-16 pb-8 px-6">
          <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                {/* Brand/About Section */}
-               <div className="flex flex-col gap-4">
-                  <h2 className="text-2xl font-bold text-white">
+               <div className="flex flex-col gap-4 ">
+                  <h2 className="text-2xl font-bold text-white text-center md:text-start lg:text-start">
                      Port<span className="text-amber-500">folio.</span>
                   </h2>
-                  <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
+                  <p className="text-slate-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0 lg:mx-0 text-center md:text-start lg:text-start">
                      A passionate MERN Stack Developer building modern web
                      applications with a focus on user experience and clean
                      code.
@@ -22,10 +23,10 @@ export default function Footer() {
 
                {/* Quick Links */}
                <div className="flex flex-col gap-4">
-                  <h3 className="text-white font-semibold uppercase tracking-wider text-sm">
+                  <h3 className="text-white font-semibold uppercase tracking-wider text-sm text-center md:text-start lg:text-start">
                      Quick Links
                   </h3>
-                  <ul className="flex flex-col gap-2 text-slate-400 text-sm">
+                  <ul className="flex flex-col gap-2 text-slate-400 text-sm text-center md:text-start lg:text-start">
                      <li>
                         <a
                            href="#about"
@@ -63,10 +64,10 @@ export default function Footer() {
 
                {/* Social Media */}
                <div className="flex flex-col gap-4">
-                  <h3 className="text-white font-semibold uppercase tracking-wider text-sm">
+                  <h3 className="text-white font-semibold uppercase tracking-wider text-sm text-center md:text-start lg:text-start">
                      Connect with me
                   </h3>
-                  <div className="flex gap-4">
+                  {/* <div className="flex gap-4">
                      <a
                         href="#"
                         className="p-2 bg-slate-900 border border-slate-800 rounded-lg text-slate-400 hover:text-amber-500 hover:border-amber-500/50 transition-all"
@@ -91,8 +92,9 @@ export default function Footer() {
                      >
                         <Mail size={20} />
                      </a>
-                  </div>
-                  <p className="text-slate-500 text-xs mt-2 italic">
+                  </div> */}
+                  <SocialLinks />
+                  <p className="text-slate-500 text-xs mt-2 italic text-center md:text-start lg:text-start">
                      Available for new opportunities.
                   </p>
                </div>

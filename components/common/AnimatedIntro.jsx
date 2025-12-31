@@ -3,7 +3,7 @@ import { ReactTyped } from 'react-typed';
 
 const AnimatedIntro = () => {
    return (
-      <h2 className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-white leading-tight">
+      <h2 className="text-4xl md:text-4xl lg:text-5xl font-extrabold mt-4 mb-6 text-white leading-tight">
          <span>I&apos;m </span>{' '}
          <ReactTyped
             className="text-amber-500 uppercase"

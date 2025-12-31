@@ -5,8 +5,8 @@ import AboutVisuals from '../common/AboutVisuals';
 
 export default function About() {
    return (
-      <ContainerLayout>
-         <div id="about">
+      <ContainerLayout id="about">
+         <div>
             {/* Section Header */}
             <div className="mb-12 text-center md:text-left">
                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 ">

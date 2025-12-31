@@ -1,9 +1,23 @@
-import React from 'react';
-
-const ContainerLayout = ({ children, bg="" }) => {
+'use client';
+import { motion } from 'motion/react';
+const ContainerLayout = ({ children, bg = '', id = '' }) => {
    return (
-      <section className={`${bg} py-24 px-6 `}>
-         <div className="max-w-7xl mx-auto">{children}</div>
+      <section id={id} className={`${bg} py-20  px-6 `}>
+         <motion.div
+            className="max-w-7xl mx-auto"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{
+               once: true,
+               amount: 0.1,
+            }}
+            transition={{
+               duration: 0.8,
+               ease: 'easeOut',
+            }}
+         >
+            {children}
+         </motion.div>
       </section>
    );
 };

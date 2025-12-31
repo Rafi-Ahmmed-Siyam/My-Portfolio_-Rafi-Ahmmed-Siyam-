@@ -8,9 +8,13 @@ export default function HomePage() {
    return (
       <div>
          <Home />
+
          <About />
+
          <Skills />
+
          <Projects />
+
          <Contact />
       </div>
    );

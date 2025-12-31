@@ -1,9 +1,17 @@
+'use client';
 import { Send } from 'lucide-react';
-import React from 'react';
+import { motion } from 'motion/react';
 
 const ContactForm = () => {
    return (
-      <div className="bg-[#111827] border border-slate-800 p-8 rounded-2xl shadow-xl">
+      <motion.div
+         whileTap={{ scale: 1.02 }}
+         transition={{
+            duration: 0.2,
+            ease: 'easeInOut',
+         }}
+         className="bg-[#111827] border border-slate-800 p-8 rounded-2xl shadow-xl"
+      >
          <form className="space-y-5">
             <input
                type="text"
@@ -30,7 +38,7 @@ const ContactForm = () => {
                />
             </button>
          </form>
-      </div>
+      </motion.div>
    );
 };
 
