@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import myImg from '@/public/rBlaxk.jpg';
+import myImg from '@/public/squire.jpg';
+// import myImg from '@/public/squireblack.jpg';
 import { Button } from '../ui/button';
 import AnimatedIntro from '../common/AnimatedIntro';
 import SocialLinks from '../common/SocialLinks';
@@ -9,30 +10,23 @@ import ContainerLayout from '../layout/ContainerLayout';
 export default function Home() {
    return (
       <ContainerLayout id={'home'}>
-         <section className=" flex items-center overflow-hidden py-0 md:py-10 lg:py-15">
+         <section className=" flex items-center overflow-hidden py-0 md:py-5 lg:py-10">
             <div className="w-300 mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-5 ">
-               <div className="max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px] mx-auto">
-                  <div className="relative flex justify-center items-center">
-                     <div className="relative group w-full">
-                        {/* মেইন সার্কেল কন্টেইনার */}
-                        <div className="relative z-10 p-1 bg-gradient-to-b from-slate-800 to-transparent rounded-full">
-                           <div className="bg-black rounded-full p-2 md:p-3 shadow-2xl overflow-hidden">
-                              {/* আপনার ইমেজ */}
-                              <div className="relative rounded-full overflow-hidden border-[8px] md:border-[12px] border-slate-900 shadow-inner">
-                                 <Image
-                                    src={myImg}
-                                    alt="Portfolio"
-                                    className="w-full h-auto object-cover"
-                                    placeholder="blur"
-                                    priority
-                                 />
-                              </div>
-                           </div>
-                        </div>
+               {/* Image Section with Large Circular Background */}
+               <div className="relative flex-1 flex justify-center items-center ">
+                  {/* Large Circle - Second Image Style */}
+                  <div className="absolute w-66 h-66 md:w-105 md:h-105 bg-slate-900/70 rounded-full translate-x-10 opacity-50 block md:hidden lg:block"></div>
 
-                        {/* নিচের রিফ্লেকশন শ্যাডো */}
-                        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-1/2 h-4 bg-amber-500/20 blur-xl rounded-full"></div>
-                     </div>
+                  {/* Image Container */}
+                  <div className="relative z-10 w-70 h-70 md:w-105 md:h-105 rounded-full overflow-hidden border-10 md:border-15 border-slate-800 shadow-2xl">
+                     <Image
+                        src={myImg}
+                        alt="Profile Picture"
+                        fill
+                        placeholder="blur"
+                        className=""
+                        priority
+                     />
                   </div>
                </div>
 
@@ -42,11 +36,12 @@ export default function Home() {
                      Hello, Welcome
                   </span>
                   <AnimatedIntro />
-                  <p className="text-slate-400 text-lg md:text-lg leading-relaxed mb-7 max-w-xl">
-                     I am a passionate **Full-stack Developer** (Beginner)
-                     specialized in building modern web applications using
-                     **Next.js** and **Tailwind CSS**. I focus on creating
-                     clean, user-friendly designs that solve real-world
+                  <p className="text-muted text-lg md:text-lg leading-relaxed mb-7 max-w-xl">
+                     I am a passionate MERN Stack Developer specializing in
+                     building modern web applications with MongoDB, Express.js,
+                     React and Node.js and I also use Next.js to enhance
+                     performance, SEO, and user experience. I enjoy creating
+                     clean, user-friendly interfaces that solve real-world
                      problems.
                   </p>
 

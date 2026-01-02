@@ -6,7 +6,7 @@ const AboutVisuals = () => {
    return (
       <div className="relative py-10 w-full max-w-4xl mx-auto">
          {/* Background Glow */}
-         <div className="absolute -inset-4 bg-amber-500/10 blur-3xl rounded-full"></div>
+         <div className="absolute -inset-4 bg-amber-500/5 dark:bg-amber-500/10 blur-3xl rounded-full"></div>
 
          {/* Grid Container: Pashapashi soman width rakhar jonno */}
          <div className="relative grid grid-cols-2 gap-6 items-stretch">
@@ -19,7 +19,7 @@ const AboutVisuals = () => {
                   repeatType: 'reverse',
                   ease: 'linear',
                }}
-               className="bg-[#111827] border border-slate-800 p-8 rounded-2xl flex flex-col items-center justify-center text-center space-y-2 hover:border-amber-500/50 transition-all shadow-xl"
+               className="bg-gray-800 dark:bg-gray-900 border border-slate-800 p-8 rounded-2xl flex flex-col items-center justify-center text-center space-y-2 hover:border-amber-500/50 transition-all shadow-xl"
             >
                <Code className="text-amber-500 mb-2" size={32} />
                <span className="text-2xl md:text-3xl font-bold text-white">
@@ -39,7 +39,7 @@ const AboutVisuals = () => {
                   repeatType: 'reverse',
                   ease: 'linear',
                }}
-               className="bg-[#111827] border border-slate-800 p-8 rounded-2xl flex flex-col items-center justify-center text-center space-y-2 hover:border-amber-500/50 transition-all shadow-xl"
+               className="bg-gray-800 dark:bg-gray-900 border border-slate-800 p-8 rounded-2xl flex flex-col items-center justify-center text-center space-y-2 hover:border-amber-500/50 transition-all shadow-xl"
             >
                <Laptop className="text-amber-500 mb-2" size={32} />
                <span className="text-2xl md:text-3xl font-bold text-white">

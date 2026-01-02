@@ -64,11 +64,11 @@ export default function MySkills() {
       <ContainerLayout id="skills">
          {/* Heading section center kora hoyeche */}
          <div className="mb-12 flex flex-col items-center justify-center text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                Technical <span className="text-amber-500">Expertise</span>
             </h2>
             <div className="h-1 w-20 bg-amber-500 rounded-full mb-6"></div>
-            <p className="text-slate-400 max-w-2xl leading-relaxed text-base md:text-lg">
+            <p className="text-muted max-w-2xl leading-relaxed text-base md:text-lg">
                I have demonstrated expertise in the following tools and
                frameworks of modern web technology to build responsive and
                scalable web applications.
@@ -79,7 +79,7 @@ export default function MySkills() {
             {skillGroups.map((group, index) => (
                <div
                   key={index}
-                  className="bg-[#111827] border border-slate-800 rounded-2xl p-5 flex flex-col items-center shadow-lg transition-transform hover:scale-[1.01]"
+                  className="bg-gray-900 border border-slate-800 rounded-2xl p-5 flex flex-col items-center shadow-lg transition-transform hover:scale-[1.01]"
                >
                   <div className="flex flex-col items-center mb-6">
                      <div className="p-2 bg-slate-800 rounded-lg mb-2">
@@ -103,7 +103,7 @@ export default function MySkills() {
                      {group.skills.map((skill, idx) => (
                         <div
                            key={idx}
-                           className="bg-[#1f2937]/40 border border-slate-800/50 p-2 rounded-xl flex flex-col items-center justify-center gap-2 hover:bg-slate-800 transition-all group"
+                           className="bg-gray-800/40 border border-slate-800/50 p-2 rounded-xl flex flex-col items-center justify-center gap-2 hover:bg-slate-800 transition-all group"
                         >
                            <div className="w-10 h-10 flex items-center justify-center relative">
                               {skill.url ? (

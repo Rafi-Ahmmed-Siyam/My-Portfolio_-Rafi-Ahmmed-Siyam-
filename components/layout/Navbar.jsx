@@ -9,77 +9,103 @@ import {
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ThemeToggleButton } from '../common/ThemeToggleButton';
 
 export default function Navbar() {
    const pathname = usePathname();
-   console.log(pathname);
-   return (
-      <nav className="bg-slate-950 border-b border-slate-800  w-full z-50">
-         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            {/* Logo */}
 
-            <Link href="#home" className="text-xl font-semibold text-white">
+   return (
+      <nav className="bg-background/80 backdrop-blur-md border-b border-slate-300 dark:border-slate-800 w-full">
+         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <Link
+               href="#home"
+               className="text-xl font-semibold text-foreground"
+            >
                Port<span className="text-amber-500">folio.</span>
             </Link>
 
-            {/* Desktop links */}
-            <div className="hidden md:flex items-center gap-6 text-slate-300">
-               <Link href="#home" className="hover:text-white">
+            <div className="hidden md:flex items-center gap-6 text-muted-foreground">
+               <Link
+                  href="#home"
+                  className="hover:text-foreground transition-colors"
+               >
                   Home
                </Link>
-               <Link href="#about" className="hover:text-white">
+               <Link
+                  href="#about"
+                  className="hover:text-foreground transition-colors"
+               >
                   About
                </Link>
-               <Link href="#skills" className="hover:text-white">
+               <Link
+                  href="#skills"
+                  className="hover:text-foreground transition-colors"
+               >
                   Skills
                </Link>
-               <Link href="#projects" className="hover:text-white">
+               <Link
+                  href="#projects"
+                  className="hover:text-foreground transition-colors"
+               >
                   Projects
                </Link>
-               <Link href="#contact" className="hover:text-white">
+               <Link
+                  href="#contact"
+                  className="hover:text-foreground transition-colors"
+               >
                   Contact
                </Link>
-               {/* <Button variant="ghost" size="icon" className="text-slate-200">
-                  <Sun className="size-5" />
-               </Button> */}
-               {/* <ThemeButton /> */}
+               <ThemeToggleButton />
             </div>
 
             {/* Mobile dropdown */}
             <div className="flex items-center gap-2 md:hidden">
-               {/* Theme button */}
-               <Button variant="ghost" size="icon" className="text-slate-200">
-                  <Sun className="size-5" />
-               </Button>
+               <ThemeToggleButton />
 
                <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                      <Button
                         variant="ghost"
                         size="icon"
-                        className="text-slate-200 "
+                        className="text-foreground"
                      >
                         <Menu className="size-5" />
                      </Button>
                   </DropdownMenuTrigger>
 
+                  {/* Mobile Menu Content: ডাইনামিক ব্যাকগ্রাউন্ড */}
                   <DropdownMenuContent
                      align="end"
-                     className="bg-slate-900 text-white border-slate-800"
+                     className="bg-background text-foreground border-slate-200 dark:border-slate-800"
                   >
-                     <DropdownMenuItem asChild>
+                     <DropdownMenuItem
+                        asChild
+                        className="focus:bg-amber-500/10"
+                     >
                         <Link href="#home">Home</Link>
                      </DropdownMenuItem>
-                     <DropdownMenuItem asChild>
+                     <DropdownMenuItem
+                        asChild
+                        className="focus:bg-amber-500/10"
+                     >
                         <Link href="#about">About</Link>
                      </DropdownMenuItem>
-                     <DropdownMenuItem asChild>
+                     <DropdownMenuItem
+                        asChild
+                        className="focus:bg-amber-500/10"
+                     >
                         <Link href="#skills">Skills</Link>
                      </DropdownMenuItem>
-                     <DropdownMenuItem asChild>
+                     <DropdownMenuItem
+                        asChild
+                        className="focus:bg-amber-500/10"
+                     >
                         <Link href="#projects">Projects</Link>
                      </DropdownMenuItem>
-                     <DropdownMenuItem asChild>
+                     <DropdownMenuItem
+                        asChild
+                        className="focus:bg-amber-500/10"
+                     >
                         <Link href="#contact">Contact</Link>
                      </DropdownMenuItem>
                   </DropdownMenuContent>

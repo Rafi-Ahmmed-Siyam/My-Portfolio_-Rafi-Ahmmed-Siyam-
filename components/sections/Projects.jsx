@@ -54,11 +54,11 @@ export default function Projects() {
          <div className="">
             {/* Section Heading */}
             <div className="mb-16 flex flex-col items-center justify-center text-center">
-               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   My Creative <span className="text-amber-500">Projects</span>
                </h2>
                <div className="h-1 w-20 bg-amber-500 rounded-full mb-6"></div>
-               <p className="text-slate-400 max-w-2xl text-sm md:text-base">
+               <p className="text-muted max-w-2xl text-sm md:text-base">
                   A selection of my recent works where I&apos;ve applied my MERN
                   stack skills to solve real-world problems.
                </p>
@@ -67,7 +67,7 @@ export default function Projects() {
             {/* Project Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                {projects.map((project, index) => (
-                  <ProjectCard key={index} project={project}/>
+                  <ProjectCard key={index} project={project} />
                ))}
             </div>
          </div>

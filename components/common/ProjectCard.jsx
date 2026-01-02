@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
             duration: 0.2,
             ease:'easeInOut'
          }}
-         className="bg-[#111827] border border-slate-800 rounded-2xl overflow-hidden shadow-xl flex flex-col hover:border-amber-500/30 transition-all group"
+         className="bg-gray-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl flex flex-col hover:border-amber-500/30 transition-all group"
       >
          {/* Project Image */}
          <div className="relative overflow-hidden aspect-video ">

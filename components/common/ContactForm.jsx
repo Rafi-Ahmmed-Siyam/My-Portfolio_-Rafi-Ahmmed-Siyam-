@@ -10,7 +10,7 @@ const ContactForm = () => {
             duration: 0.2,
             ease: 'easeInOut',
          }}
-         className="bg-[#111827] border border-slate-800 p-8 rounded-2xl shadow-xl"
+         className="bg-gray-900 border border-slate-800 p-5  md:p-8 lg:p-8 rounded-2xl shadow-xl"
       >
          <form className="space-y-5">
             <input

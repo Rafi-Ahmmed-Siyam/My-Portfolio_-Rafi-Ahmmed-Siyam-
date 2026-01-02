@@ -1,9 +1,35 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
 
-html{
+@theme {
+   --color-background: var(--bg-main);
+   --color-foreground: var(--text-main);
+   --color-muted: var(--text-muted);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+   --bg-main: #FAFAF9;      
+   --text-main: #020617;    
+   --text-muted: #1e293b;   
+}
+
+.dark {
+   --bg-main: #020617;     
+   --text-main: #f8fafc;    
+   --text-muted: #94a3b8;  
+}
+
+html {
    scroll-behavior: smooth;
 }
-button{
+
+body {
+   background-color: var(--bg-main);
+   color: var(--text-main);
+   transition: background-color 0.3s, color 0.3s;
+}
+
+button {
    cursor: pointer;
 }
